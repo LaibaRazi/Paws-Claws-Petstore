@@ -28,10 +28,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -40,24 +40,24 @@
                         Instore-Pets
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Cats</a>
-                        <a class="dropdown-item" href="#">Dogs</a>
-                        <a class="dropdown-item" href="#">Small animals</a>
-                        <a class="dropdown-item" href="#">Fish</a>
-                        <a class="dropdown-item" href="#">Reptiles</a>
+                        <a class="dropdown-item" href="/instore">Cats</a>
+                        <a class="dropdown-item" href="/instore">Dogs</a>
+                        <a class="dropdown-item" href="/instore">Small animals</a>
+                        <a class="dropdown-item" href="/instore">Fish</a>
+                        <a class="dropdown-item" href="/instore">Reptiles</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Pet supplies</a>
+                        <a class="dropdown-item" href="/instore">Pet supplies</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sale</a>
+                    <a class="nav-link" href="/instore">Sale</a>
                 </li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="contact">Contact</a>
                 </li>
                 <li class="nav-item" >
-                    <a class="nav-link"  href="#"><i class="bi bi-cart"></i>Cart</a>
+                    <a class="nav-link"  href="/cart"><i class="bi bi-cart"></i>Cart</a>
                 </li>
             </ul>
         </div>

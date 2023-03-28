@@ -16,4 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-Route::view('/About', 'about');
+Route::view('/about', 'about');
+Route::view('/instore','instore');
+Route::view('/cart','cart');
+Route::view('/contact','contact');
