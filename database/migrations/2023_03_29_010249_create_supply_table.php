@@ -14,7 +14,12 @@ class CreateSupplyTable extends Migration
     public function up()
     {
         Schema::create('supply', function (Blueprint $table) {
-            $table->id();
+            $table->id('Id_supply');
+            $table->string('Supplies');
+            $table->bigInteger('Price');
+            $table->integer('Quantity');
+            $table->string('Image');
+            $table->string('Status')->default('In Stock');
             $table->timestamps();
         });
     }

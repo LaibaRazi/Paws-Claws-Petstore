@@ -14,7 +14,14 @@ class CreatePetstoreTable extends Migration
     public function up()
     {
         Schema::create('petstore', function (Blueprint $table) {
-            $table->id();
+            $table->id('Id_pet');
+            $table->string('PetName');
+            $table->string('Category');
+            $table->string('BreedName');
+            $table->bigInteger('Price');
+            $table->string('Status')->default('In Stock');
+            $table->string('Sale');
+            $table->string('BuyerName')->default('No');
             $table->timestamps();
         });
     }

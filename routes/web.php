@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\pet;
+use App\Http\Controllers\pet_supply;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +20,9 @@ Route::get('/', function () {
 Route::view('/about', 'about');
 Route::view('/instore','instore');
 Route::view('/cart','cart');
+Route::get('/insert',[pet::class,'pet'])->name('pet.view');
+Route::post('/insert',[pet::class,'store']);
+Route::get('/supply',[pet_supply::class,'supply'])->name('supply.view');
+Route::post('/supply',[pet_supply::class,'stores']);
 Route::view('/contact','contact');
+

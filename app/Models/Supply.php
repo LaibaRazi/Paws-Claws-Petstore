@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Supply extends Model
 {
-    protected $table='Supplies';
-    protected $PrimaryKey='ID';
+    protected $table='supply';
+    protected $PrimaryKey='Id_supply';
     use HasFactory;
 }

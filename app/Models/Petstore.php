@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Petstore extends Model
 {
+    protected $table='petstore';
+    protected $PrimaryKey='Id_pet';
     use HasFactory;
 }
