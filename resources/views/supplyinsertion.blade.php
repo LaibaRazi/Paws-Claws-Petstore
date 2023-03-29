@@ -20,7 +20,7 @@
 
     @include('header')
 
-    <form class="p-4" method="POST" action="{{ url('/supply') }}">
+    <form class="p-4" method="POST" action="{{ url('/supply') }}" enctype="multipart/form-data">
         <!-- 2 column grid layout with text inputs for the first and last names -->
         @csrf
 
@@ -50,7 +50,7 @@
                     <label class="form-label" for="form6Example1">Image Of Pet:</label>
 
                 </div>
-                <input type="file" name="Image"/>
+                <input type="file" name="Image" />
             </div>
 
         </div>
