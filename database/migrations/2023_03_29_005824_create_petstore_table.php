@@ -20,8 +20,10 @@ class CreatePetstoreTable extends Migration
             $table->string('BreedName');
             $table->bigInteger('Price');
             $table->string('Status')->default('In Stock');
+            $table->string('Image');
             $table->string('Sale');
             $table->string('BuyerName')->default('No');
+
             $table->timestamps();
         });
     }

@@ -28,7 +28,7 @@
             <div class="col">
                 <div class="form-outline">
                     <label class="form-label" for="form6Example1">Item :</label>
-                    <input type="text" id="form6Example1" class="form-control" name="Supplies"/>
+                    <input type="text" id="form6Example1" class="form-control" name="Supplies" />
                 </div>
             </div>
             <div class="col">
@@ -42,17 +42,15 @@
             <div class="col">
                 <div class="form-outline">
                     <label class="form-label" for="form6Example1">Quantity:</label>
-                    <input type="text" id="form6Example1" class="form-control" name="Quantity"/>
+                    <input type="text" id="form6Example1" class="form-control" name="Quantity" />
                 </div>
             </div>
             <div class="col">
                 <div class="form-outline">
                     <label class="form-label" for="form6Example1">Image Of Pet:</label>
-
                 </div>
                 <input type="file" name="Image" />
             </div>
-
         </div>
         <!-- Submit button -->
         <button type="submit" class="btn btn-primary ">Add Record</button>

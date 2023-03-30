@@ -20,7 +20,7 @@
 
     @include('header')
 
-    <form class="p-4" method="POST" action="{{ url('/insert') }}">
+    <form class="p-4" method="POST" action="{{ url('/insert') }}" enctype="multipart/form-data">
         <!-- 2 column grid layout with text inputs for the first and last names -->
         @csrf
 
@@ -65,6 +65,13 @@
 
                 </div>
             </div>
+            <div class="col">
+                <div class="form-outline">
+                    <label class="form-label" for="form6Example1">Image Of Pet:</label>
+                </div>
+                <input type="file" name="Image" />
+            </div>
+        </div>
         </div>
 
 
