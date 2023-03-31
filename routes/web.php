@@ -25,5 +25,7 @@ Route::post('/insert',[pet::class,'store']);
 Route::get('/insert/display',[pet::class,'displaypet']);
 Route::get('/supply',[pet_supply::class,'supply'])->name('supply.view');
 Route::post('/supply',[pet_supply::class,'stores']);
+//Edit and Delete
+Route::get('/insert/delete/{id}',[pet::class,'delete'])->name('insert.delete');
 Route::view('/contact','contact');
 

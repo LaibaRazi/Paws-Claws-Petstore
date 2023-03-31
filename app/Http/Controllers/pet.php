@@ -33,6 +33,17 @@ class pet extends Controller
 
     }
 
+public function displaypet()
+{
+    $petstore = Petstore::all();
+    $data=compact('petstore');
+    return view('pet-record-display')->with($data);
+}
 
+public function delete($id)
+{
+    $petstore = Petstore::where('Id_pet', $id) ->delete();
+    return back();
+}
 
 }
