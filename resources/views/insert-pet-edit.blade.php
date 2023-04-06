@@ -20,21 +20,22 @@
 
     @include('header')
 
-    <form class="p-4" method="POST" action="{{ url('/insert') }}" enctype="multipart/form-data">
+    <form class="p-4" method="POST" action="{{ url('insert/update'.$petstore->Id_pet) }}" >
         <!-- 2 column grid layout with text inputs for the first and last names -->
-        @csrf
+        {{ csrf_field() }}
+        @method('Put')
 
         <div class="row mb-4">
             <div class="col">
                 <div class="form-outline">
                     <label class="form-label" for="form6Example1">Pet-Name :</label>
-                    <input type="text" id="form6Example1" class="form-control" name="PetName"/>
+                    <input type="text" id="form6Example1" class="form-control" name="PetName" value="{{ $petstore->PetName }}"/>
                 </div>
             </div>
             <div class="col">
                 <div class="form-outline">
                     <label class="form-label" for="form6Example2">Category</label>
-                    <input type="text" id="form6Example2" class="form-control" name="Category" />
+                    <input type="text" id="form6Example2" class="form-control" name="Category" value="{{ $petstore->Category}}"/>
                 </div>
             </div>
         </div>
@@ -42,13 +43,13 @@
             <div class="col">
                 <div class="form-outline">
                     <label class="form-label" for="form6Example1">Breed Name:</label>
-                    <input type="text" id="form6Example1" class="form-control" name="BreedName"/>
+                    <input type="text" id="form6Example1" class="form-control" name="BreedName" value="{{ $petstore->BreedName}}"/>
                 </div>
             </div>
             <div class="col">
                 <div class="form-outline">
                     <label class="form-label" for="form6Example2">Price</label>
-                    <input type="text" id="form6Example2" class="form-control" name="Price"/>
+                    <input type="text" id="form6Example2" class="form-control" name="Price" value="{{ $petstore->Price}}"/>
                 </div>
             </div>
         </div>
@@ -57,11 +58,25 @@
             <div class="col p-4">
                 <label for="">Sale</label>
                 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                    <input type="radio"  name="Sale" id="btnradio1" autocomplete="off" value="On Sale" >
-                    <label class="text-dark" for="btnradio1"  > On Sale</label>
+                    <?php
+                    if ( $petstore->Sale =='On Sale')
 
-                    <input type="radio"  name="Sale" id="btnradio2" autocomplete="off" checked value="Not On Sale">
-                    <label class="text-dark" for="btnradio2" > Not on Sale</label>
+
+                    echo"<input type='radio'  name='Sale' id='btnradio1' autocomplete='off' Checked value='On Sale'>
+                    <label class='text-dark' for='btnradio1' > On Sale</label>
+
+                    <input type='radio'  name='Sale' id='btnradio2' autocomplete='off' value='Not On Sale' >
+                    <label class='text-dark' for='btnradio2'> Not on Sale</label>";
+
+                    else
+
+                    echo"<input type='radio'  name='Sale' id='btnradio1' autocomplete='off' value='On Sale' >
+                    <label class='text-dark' for='btnradio1' > On Sale</label>
+
+                    <input type='radio'  name='Sale' id='btnradio2' autocomplete='off' Checked value='Not On Sale'>
+                    <label class='text-dark' for='btnradio2'> Not on Sale</label>";
+
+                    ?>
 
                 </div>
             </div>
@@ -69,7 +84,9 @@
                 <div class="form-outline">
                     <label class="form-label" for="form6Example1">Image Of Pet:</label>
                 </div>
-                <input type="file" name="Image" value="{{ asset('storage/images/' . $petstores->Image) }}"  />
+                <input type="file" name="Image" value=""  />
+                <img src="{{ asset('storage/images/' . $petstore->Image) }}" width="150px" height="150px"
+                            alt="">
             </div>
         </div>
         </div>

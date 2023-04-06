@@ -22,10 +22,16 @@ Route::view('/instore','instore');
 Route::view('/cart','cart');
 Route::get('/insert',[pet::class,'pet'])->name('pet.view');
 Route::post('/insert',[pet::class,'store']);
-Route::get('/insert/display',[pet::class,'displaypet']);
+Route::get('/insert/display',[pet::class,'displaypet'])->name('pet.display');
 Route::get('/supply',[pet_supply::class,'supply'])->name('supply.view');
 Route::post('/supply',[pet_supply::class,'stores']);
-//Edit and Delete
-Route::get('/insert/delete/{id}',[pet::class,'delete'])->name('insert.delete');
 Route::view('/contact','contact');
+//Delete
+Route::get('/insert/delete/{id}',[pet::class,'delete'])->name('insert.delete');
+
+//Edit
+Route::get('/insert/edit/{id}',[pet::class,'edit']);
+Route::put('insert/update/{id}', [pet::class,'update']) ;
+
+
 
