@@ -20,7 +20,7 @@
     <div class="row p-5">
         <div class="col-md-4">
             <div class="card">
-                <img class="card-img-top"
+                 <img class="card-img-top"
                     src="https://media.istockphoto.com/id/1137633429/photo/golden-hamster-in-front-of-white-background.jpg?s=612x612&w=0&k=20&c=PMLTheCQNARkjE05NgI-MFf4-2RgMJwgfgUEUVDlLDs="
                     alt="">
                 <div class="card-body">
