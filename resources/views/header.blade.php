@@ -59,6 +59,15 @@
                 <li class="nav-item" >
                     <a class="nav-link"  href="/cart"><i class="bi bi-cart"></i>Cart</a>
                 </li>
+                {{-- on right side --}}
+                <?php
+                // if ($petstore->users = 'admin') {
+                //     # code...
+                // }
+                ?>
+                <li class="nav-item right">
+                    <a class="nav-link" href="/insert/display">Admin</a>
+                </li>
             </ul>
         </div>
     </nav>
