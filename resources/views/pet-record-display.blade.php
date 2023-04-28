@@ -34,7 +34,7 @@
                 <td>{{ $petstores->BreedName }}</td>
                 <td>{{ $petstores->Price }}</td>
                 <td>{{ $petstores->Status }}</td>
-                <td><img src="{{ asset('storage/images/'.$petstores->Image) }}" width="150px" height="150px" alt=""> </td>
+                <td><img src="{{asset('storage/images'.$petstores->Image) }}" width="150px" height="150px" alt=""> </td>
                 <td>{{ $petstores->Sale }}</td>
                 <td>{{ $petstores->BuyerName }}</td>
                 <td> <a  href="{{url('/insert/delete/')}}/{{$petstores->Id_pet}}"><button class="btn btn-danger" type="submit"> Delete</button></a> </td>
