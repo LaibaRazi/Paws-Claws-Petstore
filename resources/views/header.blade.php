@@ -65,9 +65,22 @@
                 //     # code...
                 // }
                 ?>
-                <li class="nav-item right">
-                    <a class="nav-link" href="/insert/display">Admin</a>
-                </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Admin
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="/insert">Add Record</a>
+                    <a class="dropdown-item" href="/insert/display">View Record</a>
+                    {{-- <a class="dropdown-item" href="/instore">Small animals</a>
+                    <a class="dropdown-item" href="/instore">Fish</a>
+                    <a class="dropdown-item" href="/instore">Reptiles</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/instore">Pet supplies</a> --}}
+                </div>
+            </li>
             </ul>
         </div>
     </nav>
